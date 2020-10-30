@@ -60,16 +60,16 @@ La apps comenzaran a correr en <http://localhost:8080>
 La app define los siguientes EndPoints
 
 	- POST /carts
-		  Ej. BODY: {"firstname": "Pedro", "lastname": "Gomez", "email": "pedro.gomez@gmail.com"}
+	    Ej. BODY: {"firstname": "Pedro", "lastname": "Gomez", "email": "pedro.gomez@gmail.com"}
 		 	   
 	- POST /carts/{id}/products
-			  Ej. BODY: {"id": 5, "quantity": 10}
+	    Ej. BODY: {"id": 5, "quantity": 10}
 			  
 	- DELETE /carts/{cartId}/products/{productId}
-           (Elimina el producto con productId del carrito con cartId)
+       (Elimina el producto con productId del carrito con cartId)
 			  
 	- GET /carts/{id}/products
-           (Consigue todos los productos del carrito con id)
+       (Consigue todos los productos del carrito con id)
   
 	- GET /carts/{id}
 	   (Consigue la información del carrito con id y sus productos)
