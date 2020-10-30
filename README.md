@@ -66,16 +66,16 @@ La app define los siguientes EndPoints
 			  Ej. BODY: {"id": 5, "quantity": 10}
 			  
 	- DELETE /carts/{cartId}/products/{productId}
-    (Elimina el producto con productId del carrito con cartId)
+           (Elimina el producto con productId del carrito con cartId)
 			  
 	- GET /carts/{id}/products
-    (Consigue todos los productos del carrito con id)
+           (Consigue todos los productos del carrito con id)
   
-  - GET /carts/{id}
-    (Consigue la información del carrito con id y sus productos)
+	- GET /carts/{id}
+	   (Consigue la información del carrito con id y sus productos)
   
-  - POST /carts/{id}/checkout
-    (Cambia el estado del carrito a READY)
+        - POST /carts/{id}/checkout
+           (Cambia el estado del carrito a READY)
 
 			  
 ## Comentarios
