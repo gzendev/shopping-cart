@@ -76,7 +76,7 @@ La app define los siguientes EndPoints
   
         - POST /carts/{id}/checkout
            (Cambia el estado del carrito a READY)
-
+	   
 			  
 ## Comentarios
 Se ha empleado Spring Security para segurizar los diferentes request al sistema, por default permiteAll. Y a través de Spring Scheduler se programó una tarea que correrá cada 10' para procesar los carritos segun un determinada lógica.
