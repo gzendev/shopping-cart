@@ -1,0 +1,24 @@
+logging:
+  level:
+    ar.org.cecba: TRACE
+    org.springframework: INFO
+    org.apache.catalina.webresources.Cache: ERROR
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://produccion:5432/shoppingcart
+    password: admin
+    username: postgres
+    hikari:
+      maximum-pool-size: 50
+      minimum-idle: 2
+      idle-timeout: 60000
+      connection-test-query: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false

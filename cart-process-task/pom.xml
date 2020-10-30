@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <artifactId>cart-process-task</artifactId>
+  <packaging>jar</packaging>
+  
+  <name>Cart Task</name>
+  <description>Process for Cart Operations</description>
+  <url>http://maven.apache.org</url>
+  
+  <parent>
+    <groupId>com.garbarino</groupId>
+    <artifactId>shopping-cart</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <dependency>
+	   <groupId>org.apache.commons</groupId>
+	   <artifactId>commons-text</artifactId>
+	   <version>1.8</version>
+	</dependency>
+	<dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+	<dependency>
+	  <groupId>org.postgresql</groupId>
+	  <artifactId>postgresql</artifactId>
+	  <scope>runtime</scope>
+	</dependency>
+  </dependencies>
+</project>

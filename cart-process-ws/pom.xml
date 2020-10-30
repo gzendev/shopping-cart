@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <artifactId>cart-process-ws</artifactId>
+  <packaging>war</packaging>
+  
+  <name>Scheduled Task</name>
+  <description>Web Service for scheduled tasks</description>
+  <url>http://maven.apache.org</url>
+  
+  <parent>
+    <groupId>com.garbarino</groupId>
+    <artifactId>shopping-cart</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.garbarino</groupId>
+      <artifactId>cart-process-task</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <finalName>${war.name}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <outputDirectory>${outputDirectory}</outputDirectory>
+          <excludeDevtools>${excludeDevtools}</excludeDevtools>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>

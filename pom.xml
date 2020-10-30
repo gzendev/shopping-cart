@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.garbarino</groupId>
+  <artifactId>shopping-cart</artifactId>
+  
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <name>Shopping Cart Project</name>
+  <url>http://maven.apache.org</url>
+  
+  <parent>
+     <groupId>org.springframework.boot</groupId>
+	 <artifactId>spring-boot-starter-parent</artifactId>
+	 <version>2.2.6.RELEASE</version>
+  </parent>
+
+  <modules>
+    <module>shopping-cart-ws</module>
+    <module>cart-process-task</module>
+    <module>cart-process-ws</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <start-class>com.garbarino.shoppingcart.ws.Application</start-class>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <lombok.version>1.18.12</lombok.version>
+    <log4jdbc.log4j2.version>1.16</log4jdbc.log4j2.version>
+    <spring-loaded.version>1.2.8.RELEASE</spring-loaded.version>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <current.basedir>${project.basedir}</current.basedir>
+    <jar.name>shopping-cart-ws</jar.name>
+    <war.name>cart-process-ws</war.name>
+  </properties>
+
+  <dependencies>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <active.profile>dev</active.profile>
+        <excludeDevtools>false</excludeDevtools>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <id>qa</id>
+      <properties>
+        <active.profile>qa</active.profile>
+        <excludeDevtools>true</excludeDevtools>
+      </properties>
+    </profile>
+    <profile>
+      <id>prd</id>
+      <properties>
+        <active.profile>prd</active.profile>
+        <excludeDevtools>true</excludeDevtools>
+      </properties>
+    </profile>
+  </profiles>
+
+</project>
