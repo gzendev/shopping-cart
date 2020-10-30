@@ -73,9 +73,9 @@ La app define los siguientes EndPoints
   
 	- GET /carts/{id}
 	   (Consigue la información del carrito con id y sus productos)
-  
-        - POST /carts/{id}/checkout
-           (Cambia el estado del carrito a READY)
+	   
+    - POST /carts/{id}/checkout
+       (Cambia el estado del carrito a READY)
 	   
 			  
 ## Comentarios
